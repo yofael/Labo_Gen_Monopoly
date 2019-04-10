@@ -11,11 +11,11 @@ class SquareTest {
 
     @BeforeEach
     void setUp() {
-        testSquare = new Square("strart");
+        testSquare = new Square("start");
     }
 
     @Test
     void getName() {
-        assert(testSquare.getName().equals("strart"));
+        assert(testSquare.getName().equals("start"));
     }
 }
