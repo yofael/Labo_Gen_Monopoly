@@ -34,7 +34,7 @@
                             <shadedClassifierName>launcher</shadedClassifierName>
                         </configuration>
                     </execution>
-                </executions> 
+                </executions>
             </plugin>
         </plugins>
     </build>
