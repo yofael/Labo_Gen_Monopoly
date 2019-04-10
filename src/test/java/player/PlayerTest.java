@@ -13,8 +13,8 @@ class PlayerTest {
     void createOnePlayer() {
         Player p1 = new Player("Rafael", TypePiece.BOTTE);
 
-        assertTrue(p1.getName().equals("Rafael"));
-        assertTrue(p1.getPiece().equals("Botte"));
+        assertEquals(p1.getName(), "Rafael");
+        assertEquals(p1.getPiece().toString(), "Botte");
     }
 
     @Test

@@ -10,6 +10,6 @@ class PieceTest {
     @Test
     void createPiece() {
         Piece p1 = new Piece(TypePiece.CHAPEAU);
-        assertTrue(p1.equals("Chapeau"));
+        assertEquals(p1.toString(), "Chapeau");
     }
 }
