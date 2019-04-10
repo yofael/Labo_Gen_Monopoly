@@ -1,5 +1,8 @@
 package player.piece;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public enum TypePiece {
     CHAPEAU("Chapeau"),
     BOTTE("Botte"),
