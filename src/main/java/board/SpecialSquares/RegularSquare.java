@@ -1,4 +1,15 @@
 package board.SpecialSquares;
 
-public class RegularSquare {
+import board.Square;
+import player.Player;
+
+public class RegularSquare extends Square {
+    public RegularSquare(String name) {
+        super(name);
+    }
+
+    @Override
+    public void landedOn(Player p) {
+
+    }
 }

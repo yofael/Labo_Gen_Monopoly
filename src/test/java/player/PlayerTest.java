@@ -17,7 +17,7 @@ class PlayerTest {
 
         Player p1 = new Player("Rafael", TypePiece.BOTTE, new Square("1") {
             @Override
-            public void landedOn() {
+            public void landedOn(Player p) {
 
             }
         }, new Board());
@@ -34,7 +34,7 @@ class PlayerTest {
         for (int i = 0; i < 8; ++i) {
             listPlayers.add((new Player("Player" + (i + 1), tabTypePieces[i], new Square("1") {
                 @Override
-                public void landedOn() {
+                public void landedOn(Player p) {
 
                 }
             }, new Board())));
@@ -47,7 +47,7 @@ class PlayerTest {
     void newPlayerForMoney() {
         Player p1 = new Player("Player", TypePiece.BOTTE, new Square("1") {
             @Override
-            public void landedOn() {
+            public void landedOn(Player p) {
 
             }
         }, new Board());
@@ -58,7 +58,7 @@ class PlayerTest {
     void StartMoney() {
         Player p1 = new Player("Player", TypePiece.BOTTE, new Square("1") {
             @Override
-            public void landedOn() { }
+            public void landedOn(Player p) { }
         }, new Board());
 
         assertEquals(1500, p1.getNetWorth());
@@ -68,7 +68,7 @@ class PlayerTest {
     void addMoney() {
         Player p1 = new Player("Player", TypePiece.BOTTE, new Square("1") {
             @Override
-            public void landedOn() { }
+            public void landedOn(Player p) { }
         }, new Board());
 
         p1.addCash(500);
@@ -79,7 +79,7 @@ class PlayerTest {
     void reduceMoney() {
         Player p1 = new Player("Player", TypePiece.BOTTE, new Square("1") {
             @Override
-            public void landedOn() { }
+            public void landedOn(Player p) { }
         }, new Board());
 
         p1.reduceCash(300);

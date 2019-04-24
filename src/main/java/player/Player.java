@@ -28,15 +28,20 @@ public class Player {
     }
 
     public String toString() {
-        return name + " " + piece;
+        return name + " " + piece + " Cash : " + money;
     }
 
     public void takeTurn(int faceValue) {
         piece.setNewLocation(board.getSquare(piece.getLocation(), faceValue));
+        piece.getLocation().landedOn(this);
     }
 
     public void addCash(double money) {
         this.money += money;
+    }
+
+    public Board getBoard() {
+        return board;
     }
 
     public void reduceCash(double money) {

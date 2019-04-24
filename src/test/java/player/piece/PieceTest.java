@@ -2,6 +2,7 @@ package player.piece;
 
 import board.Square;
 import org.junit.jupiter.api.Test;
+import player.Player;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,7 +14,7 @@ class PieceTest {
     void createPiece() {
         Piece p1 = new Piece(TypePiece.CHAPEAU, new Square("1") {
             @Override
-            public void landedOn() {
+            public void landedOn(Player p) {
 
             }
         });
@@ -24,14 +25,14 @@ class PieceTest {
     void getSetLocationTest() {
         Piece p1 = new Piece(TypePiece.BOTTE, new Square("1") {
             @Override
-            public void landedOn() {
+            public void landedOn(Player p) {
 
             }
         });
 
         p1.setNewLocation(new Square("Start") {
             @Override
-            public void landedOn() {
+            public void landedOn(Player p) {
 
             }
         });

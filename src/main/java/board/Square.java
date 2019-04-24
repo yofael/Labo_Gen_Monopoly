@@ -1,5 +1,7 @@
 package board;
 
+import player.Player;
+
 public abstract class Square {
 
     private String name;
@@ -8,7 +10,7 @@ public abstract class Square {
         this.name = name;
     }
 
-    public abstract void landedOn();
+    public abstract void landedOn(Player p);
 
     public String getName() {
         return name;

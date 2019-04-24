@@ -1,5 +1,5 @@
 import board.Board;
-import dice.Dice;
+import dice.Cup;
 import player.Player;
 import player.piece.TypePiece;
 
@@ -9,15 +9,13 @@ import java.util.List;
 
 public class Monopoly {
 
-    static Dice d1 = new Dice();
-    static Dice d2 = new Dice();
+    static Cup cup = new Cup();
     static Board board = new Board();
     static List<Player> listPlayer = new ArrayList<>();
 
     private static void playRound(Player player) {
-        d1.roll();
-        d2.roll();
-        player.takeTurn(d1.faceValue() + d2.faceValue());
+        cup.roll();
+        player.takeTurn(cup.getTotal());
         System.out.println(player);
     }
     private static void playGame() {

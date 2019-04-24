@@ -3,6 +3,7 @@ package board;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import player.Player;
 
 import java.util.logging.Logger;
 
@@ -23,7 +24,7 @@ class BoardTest {
        for(int i=1;i<40;i++) {
            Square old = new Square(Integer.toString(i)) {
                @Override
-               public void landedOn() {
+               public void landedOn(Player p) {
 
                }
            };
