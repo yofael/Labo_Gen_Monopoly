@@ -1,5 +1,5 @@
 public class Monopoly {
-    public static void main() {
 
+    public static void main() {
     }
 }
