@@ -2,6 +2,7 @@ package board;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import player.Player;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,7 +14,7 @@ class SquareTest {
     void setUp() {
         testSquare = new Square("start") {
             @Override
-            public void landedOn() {
+            public void landedOn(Player p) {
 
             }
         };

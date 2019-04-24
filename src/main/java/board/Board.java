@@ -1,5 +1,11 @@
 package board;
 
+import board.SpecialSquares.GoToJailSquare;
+import board.SpecialSquares.IncomeTaxSquare;
+import board.SpecialSquares.RegularSquare;
+import board.SpecialSquares.StartSquare;
+import player.Player;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,12 +15,21 @@ public class Board {
 
     public Board() {
         for(int i = 1; i<=40;i++){
-            board.add(new Square(Integer.toString(i)) {
-                @Override
-                public void landedOn() {
+            if (i == 31) {
+                board.add(new GoToJailSquare(Integer.toString(i)));
+            } else if (i == 5){
+                board.add(new IncomeTaxSquare(Integer.toString(i)));
+            } else if (i == 1) {
+                board.add(new StartSquare(Integer.toString(i)));
+            } else {
+                board.add(new RegularSquare(Integer.toString(i)) {
+                    @Override
+                    public void landedOn(Player p) {
 
-                }
-            });
+                    }
+                });
+            }
+
         }
     }
 
