@@ -11,7 +11,12 @@ class SquareTest {
 
     @BeforeEach
     void setUp() {
-        testSquare = new Square("start");
+        testSquare = new Square("start") {
+            @Override
+            public void landedOn() {
+
+            }
+        };
     }
 
     @Test

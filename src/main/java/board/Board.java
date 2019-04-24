@@ -9,7 +9,12 @@ public class Board {
 
     public Board() {
         for(int i = 1; i<=40;i++){
-            board.add(new Square(Integer.toString(i)));
+            board.add(new Square(Integer.toString(i)) {
+                @Override
+                public void landedOn() {
+
+                }
+            });
         }
     }
 
