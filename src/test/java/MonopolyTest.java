@@ -24,12 +24,12 @@ class MonopolyTest {
             listPlayer.add(new Player("Player " + i, list.get(i), board.getAllSquares().get(0), board));
             assertEquals("Player " + i + " " + list.get(i) + " Case 1", listPlayer.get(i).toString());
         }
-        int test = 1;
+        int MockDeFaceValue = 1;
         for (int i = 0; i < 2; ++i) {
-            test += 5;
+            MockDeFaceValue += 5;
             for (int j = 0; j < 2; ++j) {
                 listPlayer.get(j).takeTurn(5);
-                assertEquals("Player " + j + " " + list.get(j) + " Case " + test, listPlayer.get(j).toString());
+                assertEquals("Player " + j + " " + list.get(j) + " Case " + MockDeFaceValue, listPlayer.get(j).toString());
             }
         }
     }

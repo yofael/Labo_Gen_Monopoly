@@ -1,6 +1,6 @@
 package board;
 
-public class Square {
+public abstract class Square {
 
     private String name;
 
@@ -8,10 +8,9 @@ public class Square {
         this.name = name;
     }
 
+    public abstract void landedOn();
 
-    public String getName(){
+    public String getName() {
         return name;
     }
-
-
 }
