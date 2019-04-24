@@ -15,7 +15,7 @@ class PlayerTest {
         Player p1 = new Player("Rafael", TypePiece.BOTTE, new Square("1"));
 
         assertEquals(p1.getName(), "Rafael");
-        assertEquals(p1.getPiece().toString(), "Botte");
+        assertEquals(p1.getPiece().toString(), "Botte Case 1");
     }
 
     @Test
@@ -26,7 +26,7 @@ class PlayerTest {
         for (int i = 0; i < 8; ++i) {
             listPlayers.add((new Player("Player" + (i + 1), tabTypePieces[i], new Square("1"))));
             assertEquals("Player" + (i+1), listPlayers.get(i).getName());
-            assertEquals(tabTypePieces[i].toString(), listPlayers.get(i).getPiece().toString());
+            assertEquals(tabTypePieces[i].toString() + " Case 1", listPlayers.get(i).getPiece().toString());
         }
     }
 }

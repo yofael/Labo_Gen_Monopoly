@@ -12,7 +12,7 @@ class PieceTest {
     @Test
     void createPiece() {
         Piece p1 = new Piece(TypePiece.CHAPEAU, new Square("1"));
-        assertEquals(p1.toString(), "Chapeau");
+        assertEquals(p1.toString(), "Chapeau Case 1");
     }
 
     @Test
