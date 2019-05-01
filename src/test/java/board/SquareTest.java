@@ -3,12 +3,13 @@ package board;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import player.Player;
+import player.piece.TypePiece;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class SquareTest {
 
-    Square testSquare;
+    private Square testSquare;
 
     @BeforeEach
     void setUp() {
@@ -21,7 +22,17 @@ class SquareTest {
     }
 
     @Test
-    void getName() {
-        assert(testSquare.getName().equals("start"));
+    void sameSquares() {
+        Board board = new Board();
+        Square s = new Square("start") {
+            @Override
+            public void landedOn(Player p) {
+
+            }
+        };
+        Player p1 = new Player("Rafael", TypePiece.BOTTE, s, board);
+        Player p2 = new Player("Yohan", TypePiece.CHAT, s, board);
+
+        assertSame(p1.getPiece().getLocation(), p2.getPiece().getLocation());
     }
 }

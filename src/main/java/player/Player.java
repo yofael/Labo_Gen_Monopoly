@@ -18,7 +18,6 @@ public class Player {
         this.piece = new Piece(type, location);
     }
 
-
     public String getName() {
         return name;
     }

@@ -17,7 +17,7 @@ public enum TypePiece {
         this.name = name;
     }
 
-    public String toString(){
+    public String toString() {
         return name;
     }
 }

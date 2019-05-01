@@ -1,10 +1,9 @@
 package board.SpecialSquares;
 
-import board.Board;
 import board.Square;
 import player.Player;
 
-public class GoToJailSquare extends Square{
+public class GoToJailSquare extends Square {
 
     public GoToJailSquare(String name) {
         super(name);
