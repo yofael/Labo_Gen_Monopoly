@@ -1,5 +1,4 @@
 import board.Board;
-import dice.Dice;
 import org.junit.jupiter.api.Test;
 import player.Player;
 import player.piece.TypePiece;
@@ -18,8 +17,7 @@ class MonopolyTest {
 
         List<Player> listPlayer = new ArrayList<>();
         EnumSet<TypePiece> all = EnumSet.allOf(TypePiece.class);
-        List<TypePiece> list = new ArrayList<>();
-        list.addAll(all);
+        List<TypePiece> list = new ArrayList<>(all);
         for (int i = 0; i < 2; ++i) {
             listPlayer.add(new Player("Player " + i, list.get(i), board.getAllSquares().get(0), board));
             assertEquals("Player " + i + " " + list.get(i) + " Case 1 Cash : 1500.0", listPlayer.get(i).toString());

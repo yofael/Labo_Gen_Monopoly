@@ -24,5 +24,4 @@ class GoToJailSquareTest {
         p1.takeTurn(30);
         assertEquals("11", p1.getPiece().getLocation().getName());
     }
-
 }

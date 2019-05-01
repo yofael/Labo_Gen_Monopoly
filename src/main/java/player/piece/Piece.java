@@ -15,9 +15,11 @@ public class Piece {
         return name.toString() + " Case " + square.getName();
     }
 
-    public Square getLocation(){return square;}
+    public Square getLocation() {
+        return square;
+    }
 
-    public void setNewLocation(Square newLocation){
+    public void setNewLocation(Square newLocation) {
         square = newLocation;
     }
 }

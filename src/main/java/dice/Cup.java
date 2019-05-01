@@ -1,8 +1,8 @@
 package dice;
 
 public class Cup {
-    Dice dice1 = new Dice();
-    Dice dice2 = new Dice();
+    private Dice dice1 = new Dice();
+    private Dice dice2 = new Dice();
 
     public void roll() {
         dice1.roll();

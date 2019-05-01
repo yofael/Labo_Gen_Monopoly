@@ -9,15 +9,16 @@ import java.util.List;
 
 public class Monopoly {
 
-    static Cup cup = new Cup();
-    static Board board = new Board();
-    static List<Player> listPlayer = new ArrayList<>();
+    private static Cup cup = new Cup();
+    private static Board board = new Board();
+    private static List<Player> listPlayer = new ArrayList<>();
 
     private static void playRound(Player player) {
         cup.roll();
         player.takeTurn(cup.getTotal());
         System.out.println(player);
     }
+
     private static void playGame() {
 
         EnumSet<TypePiece> all = EnumSet.allOf(TypePiece.class);
@@ -35,8 +36,7 @@ public class Monopoly {
         }
     }
 
-    public static void main(String ... args) {
+    public static void main(String... args) {
         playGame();
     }
-
 }
